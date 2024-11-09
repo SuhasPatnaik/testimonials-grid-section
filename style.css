@@ -24,7 +24,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 22rem;
+  max-width: 75%;
   align-items: center;
   padding: 3rem 0rem;
   gap: 2rem;
@@ -65,8 +65,13 @@ body {
   opacity: 50%;
 }
 
+.testimonial-summary {
+  font-size: 1rem;
+}
+
 .testimonial-story {
   opacity: 70%;
+  font-size: 0.8rem;
 }
 
 .card1 {
@@ -91,4 +96,46 @@ body {
 .card4 {
   background-color: var(--very-dark-blackish-blue);
   color: var(--white);
+}
+
+@media (min-width: 1048px) {
+  .main-container {
+    max-width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .testimonial-card {
+    justify-content: center;
+  }
+
+  .card1 {
+    grid-column: 1 / span 2;
+  }
+
+  .card2 {
+    grid-column: 3;
+    align-self: stretch;
+  }
+
+  .card5 {
+    grid-column: 4;
+    grid-row: 1 / span 2;
+    align-self: stretch;
+    justify-content: start;
+  }
+
+  .card3 {
+    align-self: stretch;
+  }
+
+  .card4 {
+    grid-column: 2 / span 2;
+    align-self: stretch;
+  }
+
+  .testimonial-story {
+    line-height: 1.5;
+  }
 }
